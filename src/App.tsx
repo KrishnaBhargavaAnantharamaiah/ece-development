@@ -14,6 +14,20 @@ const capabilities = [
   'Planetary Systems', 'Asteroid & Celestial Exploration', 'Long-Duration Missions', 'Computational Space Research',
 ]
 
+const nicCodes = [
+  ['26201', 'Manufacture of desktop computers, laptop computers, hand-held computers, mainframe computers and computer servers'],
+  ['30301', 'Manufacture of airplanes'],
+  ['30302', 'Manufacture of helicopters'],
+  ['30304', 'Manufacture of spacecraft and launch vehicles, satellites, planetary probes, orbital stations, shuttles, ICBM and similar missiles'],
+  ['30305', 'Manufacture of parts and accessories of the aircraft and spacecraft of this class'],
+  ['35104', 'Electric power generation and transmission by nuclear power plants'],
+  ['26302', 'Manufacture of telephone and facsimile equipment, including telephone answering machines, PBX'],
+  ['26107', 'Manufacture of microprocessors'],
+  ['29101', 'Manufacture of passenger cars'],
+  ['26209', 'Manufacture of computers and peripheral equipment n.e.c.'],
+  ['69100', 'Legal activities'],
+]
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   return (
@@ -50,7 +64,24 @@ function App() {
 
         <section id="technology" className="section technology-section"><div className="section-label">03 / TECHNOLOGY</div><div className="technology-grid"><div><p className="kicker">THE COMPUTATIONAL ENGINE</p><h2>Evolutionary<br /><span>Computation</span></h2><p className="lead">Our foundational discipline remains Evolutionary Computation — now directed toward the challenges of deep-space exploration.</p><p>Evolutionary algorithms can search enormous solution spaces, adapt to changing constraints and discover unconventional solutions. These properties make evolutionary methods an exciting research foundation for future space missions.</p></div><div className="capability-panel"><div className="panel-glow" />{capabilities.map((item, index) => <div className="capability" key={item}><span>{String(index + 1).padStart(2, '0')}</span>{item}<b>+</b></div>)}</div></div></section>
 
-        <section id="codes" className="section codes-section"><div className="section-label">04 / INDUSTRY FOUNDATION</div><div className="codes-grid"><div><p className="kicker">11 NIC INDUSTRY CODES</p><h2>One Industrial<br /><span>Foundation.</span></h2></div><div><p className="lead">The company’s registered <strong>11 NIC Industry Codes</strong> will be applied within the new Deep Space Exploration direction.</p><p>These industry activities form a broad foundation for the technological, computational, engineering, manufacturing and exploration capabilities required to develop a deep-space enterprise.</p><div className="code-badge"><span>11</span><div><strong>NIC INDUSTRY CODES</strong><small>APPLIED TO DEEP SPACE EXPLORATION</small></div></div></div></div></section>
+        <section id="codes" className="section codes-section">
+          <div className="section-label">04 / UDYAM &amp; INDUSTRY FOUNDATION</div>
+          <div className="codes-grid">
+            <div>
+              <p className="kicker">11 NIC INDUSTRY CODES</p>
+              <h2>One Industrial<br /><span>Foundation.</span></h2>
+              <div className="certificate-card">
+                <div className="certificate-seal">MSME</div>
+                <div><strong>UDYAM REGISTRATION CERTIFICATE</strong><small>EVOLUTIONARY COMPUTATION ENTERPRISES</small><small>UDYAM-KR-03-0660650</small></div>
+              </div>
+            </div>
+            <div>
+              <p className="lead">The Udyam Registration Certificate confirms the enterprise as a <strong>Micro</strong> enterprise with <strong>Manufacturing</strong> as its major activity. The registered 11 NIC Industry Codes will be applied within the new Deep Space Exploration direction.</p>
+              <div className="nic-table">{nicCodes.map(([code, description], index) => <div className="nic-row" key={code}><span>{String(index + 1).padStart(2, '0')}</span><strong>{code}</strong><p>{description}</p></div>)}</div>
+              <div className="certificate-meta"><span><b>Udyam No.</b> UDYAM-KR-03-0660650</span><span><b>Major Activity</b> Manufacturing</span><span><b>Enterprise Type</b> Micro</span><span><b>Registration Date</b> 16/02/2026</span><span><b>Incorporation</b> 28/08/2025</span></div>
+            </div>
+          </div>
+        </section>
 
         <section id="about" className="section about-section"><div className="section-label">05 / ABOUT ECE</div><div className="about-grid"><div><p className="kicker">OUR NEW IDENTITY</p><h2>Built for the<br /><span>Cosmic Frontier.</span></h2></div><div><p>Evolutionary Computation Enterprises is pursuing a long-term vision of becoming a deep space exploration company. Our work brings together evolutionary computation, scientific thinking, engineering and exploration.</p><p>We look toward the Moon, Mars, asteroids, the outer Solar System and the wider Universe — with Evolutionary Computation as a core intellectual and technological foundation.</p><div className="motto-large">{motto}</div></div></div></section>
 
