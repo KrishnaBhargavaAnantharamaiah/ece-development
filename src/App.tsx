@@ -15,17 +15,7 @@ const capabilities = [
 ]
 
 const nicCodes = [
-  ['26201', 'Manufacture of desktop computers, laptop computers, hand-held computers, mainframe computers and computer servers'],
-  ['30301', 'Manufacture of airplanes'],
-  ['30302', 'Manufacture of helicopters'],
-  ['30304', 'Manufacture of spacecraft and launch vehicles, satellites, planetary probes, orbital stations, shuttles, ICBM and similar missiles'],
-  ['30305', 'Manufacture of parts and accessories of the aircraft and spacecraft of this class'],
-  ['35104', 'Electric power generation and transmission by nuclear power plants'],
-  ['26302', 'Manufacture of telephone and facsimile equipment, including telephone answering machines, PBX'],
-  ['26107', 'Manufacture of microprocessors'],
-  ['29101', 'Manufacture of passenger cars'],
-  ['26209', 'Manufacture of computers and peripheral equipment n.e.c.'],
-  ['69100', 'Legal activities'],
+  ['62011', 'Writing, modifying, testing of computer program to meet the needs of a particular client excluding web-page designing'],
 ]
 
 function App() {
@@ -39,7 +29,7 @@ function App() {
         </a>
         <button className="menu-button" aria-label="Toggle navigation" onClick={() => setMenuOpen(!menuOpen)}><span /><span /><span /></button>
         <nav className={menuOpen ? 'nav-links open' : 'nav-links'}>
-          <a href="#mission" onClick={() => setMenuOpen(false)}>Mission</a><a href="#exploration" onClick={() => setMenuOpen(false)}>Exploration</a><a href="#technology" onClick={() => setMenuOpen(false)}>Technology</a><a href="#codes" onClick={() => setMenuOpen(false)}>11 NIC Codes</a><a href="#about" onClick={() => setMenuOpen(false)}>About</a><a className="nav-cta" href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+          <a href="#mission" onClick={() => setMenuOpen(false)}>Mission</a><a href="#exploration" onClick={() => setMenuOpen(false)}>Exploration</a><a href="#technology" onClick={() => setMenuOpen(false)}>Technology</a><a href="#codes" onClick={() => setMenuOpen(false)}>NIC Code</a><a href="#about" onClick={() => setMenuOpen(false)}>About</a><a className="nav-cta" href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
       </header>
 
@@ -68,7 +58,7 @@ function App() {
           <div className="section-label">04 / UDYAM &amp; INDUSTRY FOUNDATION</div>
           <div className="codes-grid">
             <div>
-              <p className="kicker">11 NIC INDUSTRY CODES</p>
+              <p className="kicker">1 NIC INDUSTRY CODE</p>
               <h2>One Industrial<br /><span>Foundation.</span></h2>
               <div className="certificate-card">
                 <div className="certificate-seal">MSME</div>
@@ -76,9 +66,9 @@ function App() {
               </div>
             </div>
             <div>
-              <p className="lead">The Udyam Registration Certificate confirms the enterprise as a <strong>Micro</strong> enterprise with <strong>Manufacturing</strong> as its major activity. The registered 11 NIC Industry Codes will be applied within the new Deep Space Exploration direction.</p>
+              <p className="lead">The updated Udyam Registration Certificate confirms the enterprise as a <strong>Micro</strong> enterprise with <strong>Services</strong> as its major activity. The certificate lists one National Industry Classification (NIC) Code.</p>
               <div className="nic-table">{nicCodes.map(([code, description], index) => <div className="nic-row" key={code}><span>{String(index + 1).padStart(2, '0')}</span><strong>{code}</strong><p>{description}</p></div>)}</div>
-              <div className="certificate-meta"><span><b>Udyam No.</b> UDYAM-KR-03-0660650</span><span><b>Major Activity</b> Manufacturing</span><span><b>Enterprise Type</b> Micro</span><span><b>Registration Date</b> 16/02/2026</span><span><b>Incorporation</b> 28/08/2025</span></div>
+              <div className="certificate-meta"><span><b>NIC 2 Digit</b> 62 — Computer programming, consultancy and related activities</span><span><b>NIC 4 Digit</b> 6201 — Computer programming activities</span><span><b>NIC 5 Digit</b> 62011</span><span><b>Major Activity</b> Services</span><span><b>Enterprise Type</b> Micro</span><span><b>Udyam No.</b> UDYAM-KR-03-0660650</span><span><b>Registration Date</b> 16/02/2026</span><span><b>Incorporation</b> 28/08/2025</span></div>
             </div>
           </div>
         </section>
