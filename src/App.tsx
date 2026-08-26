@@ -15,7 +15,17 @@ const capabilities = [
 ]
 
 const nicCodes = [
-  ['63119', 'Other data processing, hosting and related activities n.e.c.'],
+  ['26201', '26 — Manufacture of computer, electronic and optical products; 2620 — Manufacture of computers and peripheral equipment; Manufacture of desktop computers, laptop computers, hand-held computers (e.g. PDA), mainframe computers and computer servers.', 'Manufacturing'],
+  ['30301', '30 — Manufacture of other transport equipment; 3030 — Manufacture of air and spacecraft and related machinery; Manufacture of airplanes.', 'Manufacturing'],
+  ['30302', '30 — Manufacture of other transport equipment; 3030 — Manufacture of air and spacecraft and related machinery; Manufacture of helicopters.', 'Manufacturing'],
+  ['30304', '30 — Manufacture of other transport equipment; 3030 — Manufacture of air and spacecraft and related machinery; Manufacture of spacecraft and launch vehicles, satellites, planetary probes, orbital stations, shuttles, intercontinental ballistic (ICBM) and similar missiles.', 'Manufacturing'],
+  ['30305', '30 — Manufacture of other transport equipment; 3030 — Manufacture of air and spacecraft and related machinery; Manufacture of parts and accessories of the aircraft of this class (major assemblies such as fuselages, wings, doors, control surfaces, landing gear, fuel tanks, nacelles, airscrews, helicopter rotors and propeller rotor blades, motors and engines of a kind typically found on aircraft, parts of turbojets and turbopropellers for aircraft, aircraft seats etc. and other specialised parts of spacecraft).', 'Manufacturing'],
+  ['35104', '35 — Electricity, gas, steam and air conditioning supply; 3510 — Electric power generation, transmission and distribution; Electric power generation and transmission by nuclear power plants.', 'Manufacturing'],
+  ['26302', '26 — Manufacture of computer, electronic and optical products; 2630 — Manufacture of communication equipment; Manufacture of telephone and facsimile equipment, including telephone answering machines, PBX.', 'Manufacturing'],
+  ['26107', '26 — Manufacture of computer, electronic and optical products; 2610 — Manufacture of electronic components; Manufacture of microprocessors.', 'Manufacturing'],
+  ['29101', '29 — Manufacture of motor vehicles, trailers and semi-trailers; 2910 — Manufacture of motor vehicles; Manufacture of passenger cars.', 'Manufacturing'],
+  ['26209', '26 — Manufacture of computer, electronic and optical products; 2620 — Manufacture of computers and peripheral equipment; Manufacture of computers and peripheral equipment n.e.c.', 'Manufacturing'],
+  ['69100', '69 — Legal and accounting activities; 6910 — Legal activities; Legal activities.', 'Services'],
 ]
 
 function App() {
@@ -29,7 +39,7 @@ function App() {
         </a>
         <button className="menu-button" aria-label="Toggle navigation" onClick={() => setMenuOpen(!menuOpen)}><span /><span /><span /></button>
         <nav className={menuOpen ? 'nav-links open' : 'nav-links'}>
-          <a href="#mission" onClick={() => setMenuOpen(false)}>Mission</a><a href="#exploration" onClick={() => setMenuOpen(false)}>Exploration</a><a href="#technology" onClick={() => setMenuOpen(false)}>Technology</a><a href="#codes" onClick={() => setMenuOpen(false)}>NIC Code</a><a href="#about" onClick={() => setMenuOpen(false)}>About</a><a className="nav-cta" href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+          <a href="#mission" onClick={() => setMenuOpen(false)}>Mission</a><a href="#exploration" onClick={() => setMenuOpen(false)}>Exploration</a><a href="#technology" onClick={() => setMenuOpen(false)}>Technology</a><a href="#codes" onClick={() => setMenuOpen(false)}>NIC Codes</a><a href="#about" onClick={() => setMenuOpen(false)}>About</a><a className="nav-cta" href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
       </header>
 
@@ -58,17 +68,17 @@ function App() {
           <div className="section-label">04 / UDYAM &amp; INDUSTRY FOUNDATION</div>
           <div className="codes-grid">
             <div>
-              <p className="kicker">1 NIC INDUSTRY CODE</p>
-              <h2>One Industrial<br /><span>Foundation.</span></h2>
+              <p className="kicker">11 NIC INDUSTRY CODES</p>
+              <h2>Industrial<br /><span>Foundations.</span></h2>
               <div className="certificate-card">
                 <div className="certificate-seal">MSME</div>
                 <div><strong>UDYAM REGISTRATION CERTIFICATE</strong><small>EVOLUTIONARY COMPUTATION ENTERPRISES</small><small>UDYAM-KR-03-0660650</small></div>
               </div>
             </div>
             <div>
-              <p className="lead">The updated Udyam Registration Certificate confirms the enterprise as a <strong>Micro</strong> enterprise with <strong>Services</strong> as its major activity. The certificate lists one National Industry Classification (NIC) Code.</p>
-              <div className="nic-table">{nicCodes.map(([code, description], index) => <div className="nic-row" key={code}><span>{String(index + 1).padStart(2, '0')}</span><strong>{code}</strong><p>{description}</p></div>)}</div>
-              <div className="certificate-meta"><span><b>NIC 2 Digit</b> 63 — Information service activities</span><span><b>NIC 4 Digit</b> 6311 — Data processing, hosting and related activities</span><span><b>NIC 5 Digit</b> 63119 — Other data processing, hosting and related activities n.e.c.</span><span><b>Major Activity</b> Services</span><span><b>Enterprise Type</b> Micro</span><span><b>Udyam No.</b> UDYAM-KR-03-0660650</span><span><b>Registration Date</b> 16/02/2026</span><span><b>Incorporation</b> 28/08/2025</span></div>
+              <p className="lead">The Udyam Registration Certificate printed on <strong>26/08/2026</strong> confirms the enterprise as a <strong>Micro</strong> enterprise with <strong>Manufacturing</strong> as its major activity. The certificate lists <strong>11 National Industry Classification (NIC) Codes</strong>, including one service activity.</p>
+              <div className="nic-table">{nicCodes.map(([code, description, activity], index) => <div className="nic-row" key={code}><span>{String(index + 1).padStart(2, '0')}</span><strong>{code}</strong><p>{description} <b>({activity})</b></p></div>)}</div>
+              <div className="certificate-meta"><span><b>NIC 2 Digit</b> 26, 30, 35, 29 &amp; 69</span><span><b>NIC 4 Digit</b> 2620, 3030, 3510, 2630, 2610, 2910 &amp; 6910</span><span><b>NIC 5 Digit</b> 26201, 30301, 30302, 30304, 30305, 35104, 26302, 26107, 29101, 26209 &amp; 69100</span><span><b>Major Activity</b> Manufacturing</span><span><b>Enterprise Type</b> Micro</span><span><b>Udyam No.</b> UDYAM-KR-03-0660650</span><span><b>Registration Date</b> 16/02/2026</span><span><b>Incorporation</b> 28/08/2025</span></div>
             </div>
           </div>
         </section>
