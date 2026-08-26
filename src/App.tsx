@@ -15,7 +15,7 @@ const capabilities = [
 ]
 
 const nicCodes = [
-  ['62011', 'Writing, modifying, testing of computer program to meet the needs of a particular client excluding web-page designing'],
+  ['32405', 'Manufacture of electronic games'],
 ]
 
 function App() {
@@ -66,9 +66,9 @@ function App() {
               </div>
             </div>
             <div>
-              <p className="lead">The updated Udyam Registration Certificate confirms the enterprise as a <strong>Micro</strong> enterprise with <strong>Services</strong> as its major activity. The certificate lists one National Industry Classification (NIC) Code.</p>
+              <p className="lead">The updated Udyam Registration Certificate confirms the enterprise as a <strong>Micro</strong> enterprise with <strong>Manufacturing</strong> as its major activity. The certificate lists one National Industry Classification (NIC) Code.</p>
               <div className="nic-table">{nicCodes.map(([code, description], index) => <div className="nic-row" key={code}><span>{String(index + 1).padStart(2, '0')}</span><strong>{code}</strong><p>{description}</p></div>)}</div>
-              <div className="certificate-meta"><span><b>NIC 2 Digit</b> 62 — Computer programming, consultancy and related activities</span><span><b>NIC 4 Digit</b> 6201 — Computer programming activities</span><span><b>NIC 5 Digit</b> 62011</span><span><b>Major Activity</b> Services</span><span><b>Enterprise Type</b> Micro</span><span><b>Udyam No.</b> UDYAM-KR-03-0660650</span><span><b>Registration Date</b> 16/02/2026</span><span><b>Incorporation</b> 28/08/2025</span></div>
+              <div className="certificate-meta"><span><b>NIC 2 Digit</b> 32 — Other manufacturing</span><span><b>NIC 4 Digit</b> 3240 — Manufacture of games and toys</span><span><b>NIC 5 Digit</b> 32405 — Manufacture of electronic games</span><span><b>Major Activity</b> Manufacturing</span><span><b>Enterprise Type</b> Micro</span><span><b>Udyam No.</b> UDYAM-KR-03-0660650</span><span><b>Registration Date</b> 16/02/2026</span><span><b>Incorporation</b> 28/08/2025</span></div>
             </div>
           </div>
         </section>
