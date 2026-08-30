@@ -6,9 +6,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<ArtificialConsciousnessPage />} />
+        <Route path="/" element={<ExistingHome />} />
         <Route path="/artificial-consciousness" element={<ArtificialConsciousnessPage />} />
-        <Route path="/legacy-home" element={<ExistingHome />} />
       </Routes>
     </BrowserRouter>
   )
