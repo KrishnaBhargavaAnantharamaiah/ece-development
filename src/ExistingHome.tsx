@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { ArtificialConsciousnessSection } from './components/ArtificialConsciousnessSection'
 
 const motto = 'TO EXPLORE THE UNIVERSE, USING THE POWER OF EVOLUTIONARY COMPUTATION!'
 
@@ -39,7 +40,7 @@ function App() {
         </a>
         <button className="menu-button" aria-label="Toggle navigation" onClick={() => setMenuOpen(!menuOpen)}><span /><span /><span /></button>
         <nav className={menuOpen ? 'nav-links open' : 'nav-links'}>
-          <a href="#mission" onClick={() => setMenuOpen(false)}>Mission</a><a href="#exploration" onClick={() => setMenuOpen(false)}>Exploration</a><a href="#technology" onClick={() => setMenuOpen(false)}>Technology</a><a href="#codes" onClick={() => setMenuOpen(false)}>NIC Codes</a><a href="#about" onClick={() => setMenuOpen(false)}>About</a><a className="nav-cta" href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+          <a href="#mission" onClick={() => setMenuOpen(false)}>Mission</a><a href="#exploration" onClick={() => setMenuOpen(false)}>Exploration</a><a href="#technology" onClick={() => setMenuOpen(false)}>Technology</a><a href="#codes" onClick={() => setMenuOpen(false)}>NIC Codes</a><a href="#about" onClick={() => setMenuOpen(false)}>About</a><a href="#artificial-consciousness" onClick={() => setMenuOpen(false)}>Artificial Consciousness</a><a className="nav-cta" href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
       </header>
 
@@ -84,6 +85,8 @@ function App() {
         </section>
 
         <section id="about" className="section about-section"><div className="section-label">05 / ABOUT ECE</div><div className="about-grid"><div><p className="kicker">OUR NEW IDENTITY</p><h2>Built for the<br /><span>Cosmic Frontier.</span></h2></div><div><p>Evolutionary Computation Enterprises is pursuing a long-term vision of becoming a deep space exploration company. Our work brings together evolutionary computation, scientific thinking, engineering and exploration.</p><p>We look toward the Moon, Mars, asteroids, the outer Solar System and the wider Universe — with Evolutionary Computation as a core intellectual and technological foundation.</p><div className="motto-large">{motto}</div></div></div></section>
+
+        <ArtificialConsciousnessSection />
 
         <section id="contact" className="contact-section"><div className="contact-stars" /><p className="kicker">THE JOURNEY BEGINS HERE</p><h2>LOOK UP.<br /><span>GO FURTHER.</span></h2><p>Evolutionary Computation Enterprises<br />Deep Space Exploration Company</p><a className="button primary" href="mailto:founderandceo.ece@gmail.com">Contact Evolutionary Computation Enterprises <span>↗</span></a><footer><span>© 2026 EVOLUTIONARY COMPUTATION ENTERPRISES</span><span>{motto}</span></footer></section>
       </main>
