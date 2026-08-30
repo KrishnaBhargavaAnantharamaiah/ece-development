@@ -16,7 +16,9 @@ export const ArtificialConsciousnessPage = () => {
     <div className="min-h-screen bg-white">
       <nav className="sticky top-0 z-50 bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white shadow-lg">
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center gap-2 text-xl font-bold"><span className="text-2xl">🚀</span><span>ECE</span></div>
+          <div className="flex items-center gap-3">
+            <img src="/ece-logo.svg" alt="Evolutionary Computation Enterprises" className="h-14 w-24 object-contain rounded-md" />
+          </div>
           <ul className="hidden md:flex gap-8 list-none">
             <li><button onClick={() => scrollToSection('home')} className="text-white hover:text-cyan-400 transition-colors font-medium">Home</button></li>
             <li><button onClick={() => scrollToSection('about')} className="text-white hover:text-cyan-400 transition-colors font-medium">About</button></li>
