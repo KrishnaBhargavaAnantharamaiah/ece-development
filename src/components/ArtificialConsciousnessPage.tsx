@@ -15,10 +15,10 @@ export const ArtificialConsciousnessPage = () => {
   return (
     <div className="min-h-screen bg-white">
       <nav className="sticky top-0 z-50 bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white shadow-lg">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center gap-3">
-            <img src="/ece-logo.svg" alt="Evolutionary Computation Enterprises" className="h-14 w-24 object-contain rounded-md" />
-          </div>
+        <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+          <button onClick={() => scrollToSection('home')} className="bg-white rounded-md p-1.5 shadow-md hover:shadow-lg transition-shadow" aria-label="Evolutionary Computation Enterprises home">
+            <img src="/ece-logo.svg" alt="Evolutionary Computation Enterprises" className="block w-28 h-16 object-contain" />
+          </button>
           <ul className="hidden md:flex gap-8 list-none">
             <li><button onClick={() => scrollToSection('home')} className="text-white hover:text-cyan-400 transition-colors font-medium">Home</button></li>
             <li><button onClick={() => scrollToSection('about')} className="text-white hover:text-cyan-400 transition-colors font-medium">About</button></li>
