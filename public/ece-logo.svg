@@ -14,6 +14,7 @@
       <stop offset="1" stop-color="#8d19ff"/>
     </linearGradient>
   </defs>
+  <rect width="720" height="420" rx="24" fill="#ffffff"/>
   <g transform="translate(360 12)">
     <path d="M0 0 L-150 270 L0 255 Z" fill="url(#logoGradient)" stroke="url(#edgeGradient)" stroke-width="2"/>
     <path d="M0 0 L150 270 L0 255 Z" fill="url(#logoGradient)" stroke="url(#edgeGradient)" stroke-width="2"/>
